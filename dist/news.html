@@ -1,68 +1,100 @@
-<head><script defer src="bundle.js"></script></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve './images/photo1.jpg' in '/Users/bogdangracev/Doc  uments/HomeWork/3 course/web front/lab3/webpack-project/src/pages'
-  ModuleNotFoundError: Module not found: Error: Can't resolve './images/photo1.jpg' in '/U  sers/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/src/pages'
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/Compilation.js:2123:28
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:923:13
-      at eval (eval at create (/Users/bogdangracev/Documents/HomeWork/3 course/web front/l  ab3/webpack-project/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1  )
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:339:22
-      at eval (eval at create (/Users/bogdangracev/Documents/HomeWork/3 course/web front/l  ab3/webpack-project/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:520:22
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:151:10
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:783:25
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:1008:8
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:1137:5
-  
-  - Compilation.js:2123 
-    [webpack-project]/[webpack]/lib/Compilation.js:2123:28
-  
-  - NormalModuleFactory.js:923 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:923:13
-  
-  
-  - NormalModuleFactory.js:339 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:339:22
-  
-  
-  - NormalModuleFactory.js:520 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:520:22
-  
-  - NormalModuleFactory.js:151 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:151:10
-  
-  - NormalModuleFactory.js:783 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:783:25
-  
-  - NormalModuleFactory.js:1008 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:1008:8
-  
-  - NormalModuleFactory.js:1137 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:1137:5
-  
-  - child-compiler.js:174 
-    [webpack-project]/[html-webpack-plugin]/lib/child-compiler.js:174:18
-  
-  - Compiler.js:629 finalCallback
-    [webpack-project]/[webpack]/lib/Compiler.js:629:5
-  
-  - Compiler.js:664 
-    [webpack-project]/[webpack]/lib/Compiler.js:664:11
-  
-  - Compiler.js:1350 
-    [webpack-project]/[webpack]/lib/Compiler.js:1350:17
-  
-  
-  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [webpack-project]/[tapable]/lib/Hook.js:18:14
-  
-  - Compiler.js:1346 
-    [webpack-project]/[webpack]/lib/Compiler.js:1346:33
-  
-  - Compilation.js:2938 finalCallback
-    [webpack-project]/[webpack]/lib/Compilation.js:2938:11
-  
-  - Compilation.js:3251 
-    [webpack-project]/[webpack]/lib/Compilation.js:3251:11
-  
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+<script defer src="bundle.js"></script><link href="assets/styles/main.css" rel="stylesheet"></head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <nav class="header__nav">
+            <h1 class="header__title">News Articles</h1>
+            <a href="index.html" class="header__nav-link">Home</a>
+            <a href="rozklad.html" class="header__nav-link">Schedule</a>
+            <a href="news.html" class="header__nav-link">News</a>
+            <a href="photo.html" class="header__nav-link">Gallery</a>
+        </nav>
+    </header>
+    <main class="main">
+        <section>
+            <article>
+                <img src="../assets/images/news1.jpg" alt="News Image 1">
+                <p><small>Published: 2024-11-07</small></p>
+                <p>Short description of the first news article. This is a brief summary that introduces the topic of the
+                    article.</p>
+                <a href="https://www.fairobserver.com/politics/the-trouble-with-the-truth/" target="_blank">Read
+                    more</a>
+            </article>
+
+            <article>
+                <img src="../assets/images/news2.jpg" alt="News Image 2">
+                <p><small>Published: 2024-11-06</small></p>
+                <p>This is a brief description of the second news article. The article covers another topic of
+                    interest.</p>
+                <a href="https://www.fairobserver.com/region/middle_east_north_africa/the-islamic-republic-of-iran-should-be-overthrown/"
+                   target="_blank">Read more</a>
+            </article>
+
+            <article>
+                <img src="../assets/images/news3.jpg" alt="News Image 3">
+                <p><small>Published: 2024-11-05</small></p>
+                <p>This is a short description of the third news article. A quick preview to grab the reader's
+                    attention.</p>
+                <a href="https://www.fairobserver.com/culture/why-dont-more-children-kill-their-parents/"
+                   target="_blank">Read more</a>
+            </article>
+
+            <article>
+                <img src="../assets/images/news4.jpg" alt="News Image 4">
+                <p><small>Published: 2024-11-04</small></p>
+                <p>A brief description of the fourth news article. The summary offers enough to spark interest in the
+                    full article.</p>
+                <a href="https://www.fairobserver.com/politics/fo-exclusive-the-israel-iran-conflict-is-getting-more-dangerous/"
+                   target="_blank">Read more</a>
+            </article>
+
+            <article>
+                <img src="../assets/images/news5.jpg" alt="News Image 5">
+                <p><small>Published: 2024-11-03</small></p>
+                <p>Here is a short introduction to the fifth article, which focuses on an important topic in the
+                    news.</p>
+                <a href="https://www.fairobserver.com/politics/kamala-harris-and-donald-trumps-imperial-dilemma/"
+                   target="_blank">Read more</a>
+            </article>
+
+            <article>
+                <img src="../assets/images/news6.jpg" alt="News Image 6">
+                <p><small>Published: 2024-11-02</small></p>
+                <p>Short summary of the sixth article. The description gives a sneak peek into the subject matter.</p>
+                <a href="https://www.fairobserver.com/more/science/outside-the-box-nosce-teipsum-or-can-a-machine-know-itself/"
+                   target="_blank">Read more</a>
+            </article>
+
+            <article>
+                <img src="../assets/images/news7.jpg" alt="News Image 7">
+                <p><small>Published: 2024-11-01</small></p>
+                <p>A quick summary of the seventh article, giving readers a glimpse into the full article.</p>
+                <a href="https://www.fairobserver.com/politics/scholars-fascists-agree-trumps-not-a-fascist-but-an-opportunity/"
+                   target="_blank">Read more</a>
+            </article>
+
+            <article>
+                <img src="../assets/images/news8.jpg" alt="News Image 8">
+                <p><small>Published: 2024-10-31</small></p>
+                <p>Here’s the summary of the eighth article. A teaser of what the reader will find in the full
+                    article.</p>
+                <a href="https://www.fairobserver.com/world-news/us-news/if-she-loses-part-2-kamalas-campaign-didnt-resonate/"
+                   target="_blank">Read more</a>
+            </article>
+
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 My Personal Website</p>
+    </footer>
+</div>
+</body>
+</html>

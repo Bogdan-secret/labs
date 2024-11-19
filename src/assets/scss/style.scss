@@ -1,0 +1,135 @@
+@use 'sass:color';
+
+// Variables
+$primary-color: #185C94;
+$secondary-color: #2B4A63;
+$accent-color: #60A3DB;
+$background-color: #042E50;
+$text-color: #90B9DB;
+
+body {
+  background: linear-gradient(45deg, #185C94, #78C0E0, #C9E8FF);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Base Styles
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+a {
+  text-decoration: none;
+  color: $accent-color;
+
+  &:hover {
+    color: color.adjust($accent-color, $lightness: 10%);
+  }
+}
+
+// BEM Blocks
+
+// Header
+.header {
+  background-color: $primary-color;
+  padding: 1rem;
+
+  &__title {
+    margin: 0;
+    color: $text-color;
+    text-align: center;
+  }
+
+  &__nav {
+    margin-top: 1rem;
+    text-align: center;
+
+    &-link {
+      margin: 0 1rem;
+      color: $text-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Main Section
+.main {
+  padding: 2rem;
+
+  &__section {
+    margin-bottom: 2rem;
+
+    &-title {
+      color: $secondary-color;
+    }
+
+    &-content {
+      color: $text-color;
+    }
+
+    &-list {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+
+      &-item {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  background-color: $secondary-color;
+  text-align: center;
+  padding: 1rem;
+  color: $text-color;
+
+  &__text {
+    margin: 0;
+  }
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to right, #185C94, #78C0E0);
+  font-family: Arial, sans-serif;
+}
+
+header, main, footer {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  text-align: center;
+  color: #185C94;
+}
+
+footer p {
+  text-align: center;
+  color: #777;
+  font-size: 0.9em;
+}

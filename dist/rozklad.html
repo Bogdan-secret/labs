@@ -1,68 +1,53 @@
-<head><script defer src="bundle.js"></script></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve './images/photo1.jpg' in '/Users/bogdangracev/Doc  uments/HomeWork/3 course/web front/lab3/webpack-project/src/pages'
-  ModuleNotFoundError: Module not found: Error: Can't resolve './images/photo1.jpg' in '/U  sers/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/src/pages'
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/Compilation.js:2123:28
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:923:13
-      at eval (eval at create (/Users/bogdangracev/Documents/HomeWork/3 course/web front/l  ab3/webpack-project/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1  )
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:339:22
-      at eval (eval at create (/Users/bogdangracev/Documents/HomeWork/3 course/web front/l  ab3/webpack-project/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:520:22
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:151:10
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:783:25
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:1008:8
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:1137:5
-  
-  - Compilation.js:2123 
-    [webpack-project]/[webpack]/lib/Compilation.js:2123:28
-  
-  - NormalModuleFactory.js:923 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:923:13
-  
-  
-  - NormalModuleFactory.js:339 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:339:22
-  
-  
-  - NormalModuleFactory.js:520 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:520:22
-  
-  - NormalModuleFactory.js:151 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:151:10
-  
-  - NormalModuleFactory.js:783 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:783:25
-  
-  - NormalModuleFactory.js:1008 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:1008:8
-  
-  - NormalModuleFactory.js:1137 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:1137:5
-  
-  - child-compiler.js:174 
-    [webpack-project]/[html-webpack-plugin]/lib/child-compiler.js:174:18
-  
-  - Compiler.js:629 finalCallback
-    [webpack-project]/[webpack]/lib/Compiler.js:629:5
-  
-  - Compiler.js:664 
-    [webpack-project]/[webpack]/lib/Compiler.js:664:11
-  
-  - Compiler.js:1350 
-    [webpack-project]/[webpack]/lib/Compiler.js:1350:17
-  
-  
-  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [webpack-project]/[tapable]/lib/Hook.js:18:14
-  
-  - Compiler.js:1346 
-    [webpack-project]/[webpack]/lib/Compiler.js:1346:33
-  
-  - Compilation.js:2938 finalCallback
-    [webpack-project]/[webpack]/lib/Compilation.js:2938:11
-  
-  - Compilation.js:3251 
-    [webpack-project]/[webpack]/lib/Compilation.js:3251:11
-  
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+<script defer src="bundle.js"></script><link href="assets/styles/main.css" rel="stylesheet"></head>
+<body>
+<div class="container">
+    <header class="header">
+        <nav class="header__nav">
+            <h1 class="header__title">Class Schedule</h1>
+            <a href="index.html" class="header__nav-link">Home</a>
+            <a href="rozklad.html" class="header__nav-link">Schedule</a>
+            <a href="news.html" class="header__nav-link">News</a>
+            <a href="photo.html" class="header__nav-link">Gallery</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section>
+            <h2>Weekly Schedule</h2>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Class</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Math</td>
+                    <td>9:00 AM - 10:30 AM</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Teachers</h2>
+            <ul>
+                <li>Mr. John Smith</li>
+                <li>Ms. Sarah Johnson</li>
+                <li>Dr. Alice Brown</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 My Personal Website</p>
+    </footer>
+</div>
+</body>
+</html>

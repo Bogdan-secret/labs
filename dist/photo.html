@@ -1,68 +1,80 @@
-<head><script defer src="bundle.js"></script></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve './images/photo1.jpg' in '/Users/bogdangracev/Doc  uments/HomeWork/3 course/web front/lab3/webpack-project/src/pages'
-  ModuleNotFoundError: Module not found: Error: Can't resolve './images/photo1.jpg' in '/U  sers/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/src/pages'
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/Compilation.js:2123:28
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:923:13
-      at eval (eval at create (/Users/bogdangracev/Documents/HomeWork/3 course/web front/l  ab3/webpack-project/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1  )
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:339:22
-      at eval (eval at create (/Users/bogdangracev/Documents/HomeWork/3 course/web front/l  ab3/webpack-project/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:520:22
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:151:10
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:783:25
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:1008:8
-      at /Users/bogdangracev/Documents/HomeWork/3 course/web front/lab3/webpack-project/no  de_modules/webpack/lib/NormalModuleFactory.js:1137:5
-  
-  - Compilation.js:2123 
-    [webpack-project]/[webpack]/lib/Compilation.js:2123:28
-  
-  - NormalModuleFactory.js:923 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:923:13
-  
-  
-  - NormalModuleFactory.js:339 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:339:22
-  
-  
-  - NormalModuleFactory.js:520 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:520:22
-  
-  - NormalModuleFactory.js:151 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:151:10
-  
-  - NormalModuleFactory.js:783 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:783:25
-  
-  - NormalModuleFactory.js:1008 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:1008:8
-  
-  - NormalModuleFactory.js:1137 
-    [webpack-project]/[webpack]/lib/NormalModuleFactory.js:1137:5
-  
-  - child-compiler.js:174 
-    [webpack-project]/[html-webpack-plugin]/lib/child-compiler.js:174:18
-  
-  - Compiler.js:629 finalCallback
-    [webpack-project]/[webpack]/lib/Compiler.js:629:5
-  
-  - Compiler.js:664 
-    [webpack-project]/[webpack]/lib/Compiler.js:664:11
-  
-  - Compiler.js:1350 
-    [webpack-project]/[webpack]/lib/Compiler.js:1350:17
-  
-  
-  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [webpack-project]/[tapable]/lib/Hook.js:18:14
-  
-  - Compiler.js:1346 
-    [webpack-project]/[webpack]/lib/Compiler.js:1346:33
-  
-  - Compilation.js:2938 finalCallback
-    [webpack-project]/[webpack]/lib/Compilation.js:2938:11
-  
-  - Compilation.js:3251 
-    [webpack-project]/[webpack]/lib/Compilation.js:3251:11
-  
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <script src="../../webpack.config.js"></script>
+<script defer src="bundle.js"></script><link href="assets/styles/main.css" rel="stylesheet"></head>
+<body>
+<div class="container">
+    <header class="header">
+        <nav class="header__nav">
+            <h1 class="header__title">Gallery</h1>
+            <a href="index.html" class="header__nav-link">Home</a>
+            <a href="rozklad.html" class="header__nav-link">Schedule</a>
+            <a href="news.html" class="header__nav-link">News</a>
+            <a href="photo.html" class="header__nav-link">Gallery</a>
+        </nav>
+    </header>
+    <main class="main">
+        <section>
+            <div class="gallery">
+                <figure>
+                    <a href="/assets/images/photo1.jpg" target="_blank">
+                        <img src="/assets/images/photo1.jpg" alt="Photo 1">
+                    </a>
+                    <figcaption>Photo 1 Caption</figcaption>
+                </figure>
+                <figure>
+                    <a href="/assets/images/photo2.jpg" target="_blank">
+                        <img src="/assets/images/photo1.jpg" alt="Photo 2">
+                    </a>
+                    <figcaption>Photo 2 Caption</figcaption>
+                </figure>
+                <figure>
+                    <a href="/assets/images/photo3.jpg" target="_blank">
+                        <img src="/assets/images/photo1.jpg" alt="Photo 3">
+                    </a>
+                    <figcaption>Photo 3 Caption</figcaption>
+                </figure>
+                <figure>
+                    <a href="/assets/images/photo4.jpg" target="_blank">
+                        <img src="/assets/images/photo1.jpg" alt="Photo 4">
+                    </a>
+                    <figcaption>Photo 4 Caption</figcaption>
+                </figure>
+                <figure>
+                    <a href="/assets/images/photo5.jpg" target="_blank">
+                        <img src="/assets/images/photo1.jpg" alt="Photo 5">
+                    </a>
+                    <figcaption>Photo 5 Caption</figcaption>
+                </figure>
+                <figure>
+                    <a href="/assets/images/photo6.jpg" target="_blank">
+                        <img src="/assets/images/photo1.jpg" alt="Photo 6">
+                    </a>
+                    <figcaption>Photo 6 Caption</figcaption>
+                </figure>
+                <figure>
+                    <a href="/assets/images/photo7.jpg" target="_blank">
+                        <img src="/assets/images/photo1.jpg" alt="Photo 7">
+                    </a>
+                    <figcaption>Photo 7 Caption</figcaption>
+                </figure>
+                <figure>
+                    <a href="/assets/images/photo8.jpg" target="_blank">
+                        <img src="/assets/images/photo1.jpg" alt="Photo 8">
+                    </a>
+                    <figcaption>Photo 8 Caption</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 My Personal Website</p>
+    </footer>
+</div>
+</body>
+</html>
+

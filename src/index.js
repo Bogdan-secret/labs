@@ -1,1 +1,2 @@
-import photo1 from './assets/images/photo1.jpg';
+import './assets/scss/index.scss';
+import './assets/scss/style.scss';
