@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expense-item__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.expense-item__price {
+  font-size: 1.25rem;
+  color: #40005d;
+}
+
+.expense-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.expense-date__month,
+.expense-date__year,
+.expense-date__day {
+  display: block;
+}
