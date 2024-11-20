@@ -25,6 +25,22 @@ module.exports = {
                     'sass-loader',
                 ],
             },
+            {
+                test: /\.less$/i,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'less-loader',
+                ],
+            },
+            {
+                test: /\.styl$/i,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'stylus-loader',
+                ],
+            },
         ]
     },
     plugins: [

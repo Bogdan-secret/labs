@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/assets/scss/index.scss ***!
-  \*****************************************************************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/index.scss ***!
+  \*********************************************************************************************************************/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -309,9 +309,9 @@ template {
 [hidden] {
   display: none;
 }
-/*!*****************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/assets/scss/style.scss ***!
-  \*****************************************************************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/style.scss ***!
+  \*********************************************************************************************************************/
 body {
   background: linear-gradient(45deg, #185C94, #78C0E0, #C9E8FF);
   margin: 0;
@@ -414,3 +414,77 @@ footer p {
   color: #777;
   font-size: 0.9em;
 }
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/assets/styles/styles.less ***!
+  \************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #185C94, #3491de, #60A3DB);
+  color: #90B9DB;
+}
+a {
+  color: #60A3DB;
+  text-decoration: none;
+}
+a:hover {
+  color: #8abbe4;
+}
+.header {
+  background-color: #185C94;
+  padding: 1rem;
+}
+.header__title {
+  margin: 0;
+  color: #90B9DB;
+  text-align: center;
+}
+.header__nav {
+  margin-top: 1rem;
+  text-align: center;
+}
+.header__nav-link {
+  margin: 0 1rem;
+  color: #90B9DB;
+}
+.header__nav-link:hover {
+  text-decoration: underline;
+}
+.main {
+  padding: 2rem;
+}
+.main__section {
+  margin-bottom: 2rem;
+}
+.main__section-title {
+  color: #2B4A63;
+}
+.main__section-content {
+  color: #90B9DB;
+}
+.main__section-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+.main__section-list-item {
+  margin-bottom: 0.5rem;
+}
+.footer {
+  background-color: #2B4A63;
+  text-align: center;
+  padding: 1rem;
+  color: #90B9DB;
+}
+.footer__text {
+  margin: 0;
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
