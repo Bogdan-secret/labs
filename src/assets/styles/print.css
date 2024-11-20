@@ -1,0 +1,42 @@
+@media print {
+    body {
+        font-family: "Times New Roman", Georgia, Palatino, serif;
+        margin: 50px;
+    }
+
+    .header, .footer {
+        display: none;
+    }
+
+    .header__title {
+        display: block;
+    }
+
+    * {
+        background: none !important;
+        color: black !important;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+}

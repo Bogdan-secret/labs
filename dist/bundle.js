@@ -20,23 +20,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./src/assets/scss/index.scss":
-/*!************************************!*\
-  !*** ./src/assets/scss/index.scss ***!
-  \************************************/
+/***/ "./src/assets/styles/print.css":
+/*!*************************************!*\
+  !*** ./src/assets/styles/print.css ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack-project/./src/assets/scss/index.scss?");
-
-/***/ }),
-
-/***/ "./src/assets/scss/style.scss":
-/*!************************************!*\
-  !*** ./src/assets/scss/style.scss ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack-project/./src/assets/scss/style.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack-project/./src/assets/styles/print.css?");
 
 /***/ }),
 
@@ -46,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_scss_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/scss/index.scss */ \"./src/assets/scss/index.scss\");\n/* harmony import */ var _assets_scss_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/scss/style.scss */ \"./src/assets/scss/style.scss\");\n/* harmony import */ var _assets_styles_styles_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/styles/styles.less */ \"./src/assets/styles/styles.less\");\n\n\n\n\n//# sourceURL=webpack://webpack-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_styles_styles_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/styles/styles.less */ \"./src/assets/styles/styles.less\");\n/* harmony import */ var _assets_styles_print_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/styles/print.css */ \"./src/assets/styles/print.css\");\n\n\n\n//# sourceURL=webpack://webpack-project/./src/index.js?");
 
 /***/ })
 
