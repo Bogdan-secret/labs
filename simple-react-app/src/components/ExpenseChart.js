@@ -1,18 +1,21 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
-
-const ExpenseChart = ({expenses}) => {
+const ExpenseChart = ({ expenses }) => {
     const months = [
         'Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень',
-        'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'
+        'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень',
     ];
 
     const monthlyExpenses = new Array(12).fill(0);
 
     expenses.forEach((expense) => {
-        const month = expense.date.getMonth();
-        monthlyExpenses[month] += expense.amount;
+        // Ensure `expense.date` is converted to a Date object
+        const date = new Date(expense.date);
+        if (!isNaN(date)) { // Check if the date is valid
+            const month = date.getMonth();
+            monthlyExpenses[month] += expense.amount;
+        }
     });
 
     const data = {
@@ -31,7 +34,7 @@ const ExpenseChart = ({expenses}) => {
     return (
         <div>
             <h3>Витрати по місяцях</h3>
-            <Bar data={data}/>
+            <Bar data={data} />
         </div>
     );
 };

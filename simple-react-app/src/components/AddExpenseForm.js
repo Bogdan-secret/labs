@@ -1,66 +1,66 @@
-// src/components/AddExpenseForm.js
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { db, collection, addDoc } from '../database/firebase'; // Import Firestore functions
 
-const AddExpenseForm = ({onAddExpense}) => {
+const AddExpenseForm = ({ onAddExpense }) => {
     const [title, setTitle] = useState('');
     const [amount, setAmount] = useState('');
     const [date, setDate] = useState('');
     const [showForm, setShowForm] = useState(false);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-
         const newExpense = {
             title,
             amount: parseFloat(amount),
-            date: new Date(date),
-            id: Math.random().toString(),
+            date: new Date(date).toISOString(),
         };
 
-        onAddExpense(newExpense);
-        setTitle('');
-        setAmount('');
-        setDate('');
-        setShowForm(false);
+        try {
+            // Save the expense to Firestore
+            const docRef = await addDoc(collection(db, 'expenses'), newExpense);
+            console.log('Document written with ID: ', docRef.id);
+
+            // Optionally call the onAddExpense callback passed from the parent component
+            if (onAddExpense) {
+                onAddExpense(newExpense);
+            }
+
+            // Reset the form
+            setTitle('');
+            setAmount('');
+            setDate('');
+            setShowForm(false);
+        } catch (error) {
+            console.error('Error adding document: ', error);
+        }
     };
 
     return (
         <div>
             <button onClick={() => setShowForm((prev) => !prev)}>
-                {showForm ? 'Закрити форму' : 'Додати витрату'}
+                {showForm ? 'Close Form' : 'Add Expense'}
             </button>
-
             {showForm && (
                 <form onSubmit={handleSubmit}>
-                    <div>
-                        <label>Назва:</label>
-                        <input
-                            type="text"
-                            value={title}
-                            onChange={(e) => setTitle(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label>Сума:</label>
-                        <input
-                            type="number"
-                            value={amount}
-                            onChange={(e) => setAmount(e.target.value)}
-                            required
-                            min="0.01"
-                        />
-                    </div>
-                    <div>
-                        <label>Дата:</label>
-                        <input
-                            type="date"
-                            value={date}
-                            onChange={(e) => setDate(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <button type="submit">Додати</button>
+                    <input
+                        type="text"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="number"
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="date"
+                        value={date}
+                        onChange={(e) => setDate(e.target.value)}
+                        required
+                    />
+                    <button type="submit">Add</button>
                 </form>
             )}
         </div>
